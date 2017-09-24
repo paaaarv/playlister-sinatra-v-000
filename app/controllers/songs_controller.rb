@@ -33,7 +33,7 @@ class SongsController < ApplicationController
 
   get '/songs/:slug/edit' do
     @song = Song.find_by_slug(:slug).first
-    binding.pry
+
     erb :"/songs/edit"
   end
 
