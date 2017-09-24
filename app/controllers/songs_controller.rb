@@ -38,6 +38,7 @@ class SongsController < ApplicationController
 
   patch '/songs/:slug' do
     @song = Song.find_by_slug(:slug).first
+    binding.pry
     if !params["artist"]["name"].empty?
       @song.artist = Artist.create(name: params["artist"]["name"])
     end
