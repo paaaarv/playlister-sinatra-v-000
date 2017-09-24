@@ -15,7 +15,6 @@ class SongsController < ApplicationController
     @song = Song.new
     @artists = Artist.all
     @genres = Genre.all
-    @genre = Genre.new(name: "Rap")
     @genre.save
     erb :'songs/new'
   end
