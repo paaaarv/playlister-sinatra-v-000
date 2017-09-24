@@ -36,7 +36,7 @@ class SongsController < ApplicationController
     erb :"/songs/edit"
   end
 
-  post '/songs/:slug' do
+  put '/songs/:slug' do
     binding.pry
     @song = Song.find_by_slug(:slug).first
     if !params["artist"]["name"].empty?
