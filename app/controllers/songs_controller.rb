@@ -36,7 +36,7 @@ class SongsController < ApplicationController
     erb :"/songs/edit"
   end
 
-  postx '/songs/:slug' do
+  post '/songs/:slug' do
     @song = Song.find_by_slug(:slug).first
     if !params["artist"]["name"].empty?
       @song.artist = Artist.create(name: params["artist"]["name"])
